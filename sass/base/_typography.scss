@@ -6,7 +6,7 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 3rem;
+  
    
 }
 
@@ -15,6 +15,8 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
+   
 
     &--main {
         display: block;
@@ -28,6 +30,11 @@ body {
         animation-delay: 3s;
         animation-iteration-count: 3;
         */
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 4rem;
+        }
         
     }
     &--sub {
@@ -37,6 +44,11 @@ body {
         letter-spacing: 1.8rem;
         /*Shorthand notation of the animation property*/
         animation: moveInRight 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+            
+        }
     }
 
 }
@@ -52,6 +64,14 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);
